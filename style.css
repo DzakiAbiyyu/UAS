@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Neonderthaw&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Neonderthaw&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgb(40, 40, 40); }
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+    /* Animasi slide in dari kiri */
+    @keyframes slideInFromLeft {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    /* Animasi slide in dari kanan */
+    @keyframes slideInFromRight {
+        from {
+            transform: translateX(100%); /* Mulai dari luar layar di sebelah kanan */
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0); /* Berakhir pada posisi asli */
+            opacity: 1;
+        }
+    }
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+    * {
+        margin : 0;
+        padding: 0;
+        box-sizing:border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color:#f0f2f5;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        background-image: url("horzontal.jpg");
+    }
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* background-color:white; */
+        width: 60%;
+        border-radius: 10px;
+        padding: 20px;
+        background-image: url("vertikal.jpg");
+        max-width: 800px;
+        filter: brightness(60px); /* Mengurangi kecerahan gambar */
+    }
+    .satu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* background-color: rgb(85, 94, 82); */
+        width: 700px; 
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .Pelita{
+        display: flex;
+        width: 150px;
+        height: 110px;
+        /* background-color: #fff; */
+        animation: slideInFromLeft 2s forwards;
+        position: relative; 
+        
+    } 
+    .ganteng{
+        height: 150px;
+        width: 150px;
+        border-radius: 30%;
+        /* background-color: black; */
+        opacity: 0;
+        animation: fadeIn 3s forwards;
+    }
+    p{
+        /* background-color: aqua; */
+        font-family:'Courier New', Courier, monospace;
+        color: white;
+        letter-spacing: 1.5px;
+        animation: slideInFromRight 2s ease-out;
+    }
+    .DUA{
+        display: flex;
+        flex-direction: column;
+        /* background-color: rgb(85, 94, 82); */
+        width: 700px;
+        padding: 10px;
+        font-family: "montserrat";
+        font-optical-sizing: auto;
+        color: white;
+    }
+    .DUA .highlight-name {
+        color: white;
+        font-weight: bold;
+        font-family: "poppins";
+        text-shadow:2px 2px 4px rgba(0, 0, 0, 0.7), /* Dark shadow for depth */
+        0 0 25px rgba(255, 255, 255, 0.5); /* Light glow effect */
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .5s step-end infinite;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .DUA .highlight-nim {
+        color: white;
+        font-weight: bold;
+        font-family: "poppins";
+        text-shadow:2px 2px 4px rgba(0, 0, 0, 0.7), /* Dark shadow for depth */
+        0 0 25px rgba(255, 255, 255, 0.5); /* Light glow effect */
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .5s step-end infinite;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .info-section {
+        padding: 2rem;
+        animation: slideUp 1s ease-in-out;
+    }
+
+    .info-group {
+        margin-bottom: 2rem;
+    }   
+    .info-item span {
+        /* background-color: white; */
+        font-size: 20px;
+        
+
+    }
+
+    .info-group h2 {
+        color: white;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e0e0e0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .info-item {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: flex-start;
+        text-shadow:2px 2px 4px rgba(0, 0, 0, 0.7), /* Dark shadow for depth */
+        0 0 25px rgba(255, 255, 255, 0.5); /* Light glow effect */
+        
+    }
+
+    .info-label {
+        width: 120px;
+        color: white;
+        width: 200px;
+        font-family: "poppins";
+        margin-right: 10px;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.2s, background 0.2s;
+    }
+
+    .social-link:hover {
+        transform: translateY(-2px);
+        background: #e9ecef;
+    }
+
+    .contact-button {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background: #0083b0;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 1rem;
+        transition: background 0.3s;
+    }   
+    
+    @media (max-width: 600px) {
+        .info-item {
+            flex-direction: column;
+        }
+        
+        .info-label {
+            width: 100%;
+            margin-bottom: 0.2rem;
+        }
+    }
